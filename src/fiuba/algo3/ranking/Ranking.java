@@ -18,7 +18,7 @@ public class Ranking<E>
         clasesDeEquivalencia = new LinkedList<Set<E>>();
     }
     
-    public void add(Set<E> nuevaClase)
+    public void agregar(Set<E> nuevaClase)
     {
         // Comprobar que los elementos a agregar sean todos originales.
         {

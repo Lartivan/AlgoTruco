@@ -21,8 +21,8 @@ public class RankingTest
         
         Set<Integer> S = new HashSet();
         S.add(4);
-        R.add(S);
-        R.add(S);
+        R.agregar(S);
+        R.agregar(S);
     }
     
     @Test
@@ -32,11 +32,11 @@ public class RankingTest
         
         Set<Integer> S = new HashSet();
         S.add(1);
-        R.add(S);
+        R.agregar(S);
 
         S = new HashSet();
         S.add(0);
-        R.add(S);
+        R.agregar(S);
         
         Assert.assertEquals(Comparaciones.Mayor,
                 R.comparar(new Integer(1), new Integer(0)));
