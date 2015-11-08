@@ -20,5 +20,9 @@ public class Carta
         else
             return CartaVersus.Mata;
     }
+    
+    public boolean equals(Carta x) { return true; }
+
+    public int hashCode() { return 1234; }
 }
 
