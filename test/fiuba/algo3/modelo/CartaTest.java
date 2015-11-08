@@ -1,4 +1,4 @@
-package test.fiuba.algo3.tests;
+package test.fiuba.algo3.modelo;
 
 import org.junit.Before;
 import org.junit.Test;
