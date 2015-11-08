@@ -33,5 +33,25 @@ public class Ranking<E>
         for (E e : nuevaClase)
             relacionesElementoClase.put(e, nuevaClase);
     }
+
+    public Comparaciones comparar(E e1, E e2)
+    {
+        Set<E> clase1, clase2;
+        clase1 = relacionesElementoClase.get(e1);
+        clase2 = relacionesElementoClase.get(e2);
+        
+        if (clase1.equals(clase2))
+            return Comparaciones.Igual;
+        
+        for (Set<E> clase : clasesDeEquivalencia)
+            if (clase.equals(clase1))
+                return Comparaciones.Mayor;
+            else if (clase.equals(clase1))
+                return Comparaciones.Menor;
+        
+        // La linea que sigue es para apaciguar al compilador:
+        //     salvo error catastrofico no debiera ejecutarse
+        throw new RuntimeException("No es mayor, menor, ni igual!");
+    }
 }
 
