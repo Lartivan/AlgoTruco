@@ -21,8 +21,15 @@ public class Carta
             return CartaVersus.Mata;
     }
     
-    public boolean equals(Carta x) { return true; }
+    public boolean equals(Carta x)
+    {
+        return palo == x.palo && valor == x.valor;
+    }
 
-    public int hashCode() { return 1234; }
+    public int hashCode()
+    {
+        // CUIDADO! Esta implementacion de hashCode no es segura.
+        return palo.hashCode() ^ valor;
+    }
 }
 
