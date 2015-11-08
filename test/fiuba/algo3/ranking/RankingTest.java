@@ -12,13 +12,11 @@ import java.util.HashSet;
 
 public class RankingTest
 {
-    private Ranking<Integer> R;
+    private Ranking<Integer> R = new Ranking<Integer>();
     
     @Test(expected = RuntimeException.class)
     public void testAgregarElementosDuplicadosCausaExcepcion()
     {
-        R = new Ranking<Integer>();
-        
         Set<Integer> S = new HashSet();
         S.add(4);
         R.agregar(S);
@@ -28,8 +26,6 @@ public class RankingTest
     @Test
     public void testClaseAgregadaDespuesValeMenos()
     {
-        R = new Ranking<Integer>();
-        
         Set<Integer> S = new HashSet();
         S.add(1);
         R.agregar(S);
@@ -40,6 +36,18 @@ public class RankingTest
         
         Assert.assertEquals(Comparaciones.Mayor,
                 R.comparar(new Integer(1), new Integer(0)));
+    }
+    
+    @Test
+    public void testElementosEnLaMismaClaseSonIguales()
+    {
+        Set<Integer> S = new HashSet();
+        S.add(1);
+        S.add(2);
+        R.agregar(S);
+        
+        Assert.assertEquals(Comparaciones.Igual,
+                R.comparar(new Integer(1), new Integer(2)));
     }
 }
 
