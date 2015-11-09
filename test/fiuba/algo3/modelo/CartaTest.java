@@ -24,6 +24,7 @@ public class CartaTest
         Carta cuatro = new Carta(Palo.Copa, 4);
         
         Assert.assertEquals(CartaVersus.Mata, Carta.comparar(cinco, cuatro));
+        Assert.assertEquals(CartaVersus.Pierde, Carta.comparar(cuatro, cinco));
     }
 }
 
