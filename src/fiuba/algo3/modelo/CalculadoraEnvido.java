@@ -19,7 +19,7 @@ public class CalculadoraEnvido
 
     private static int valor(Carta c)
     {
-        return c.getValor();
+        return c.getValor() < 10 ? c.getValor() : 0;
     }
 }
 

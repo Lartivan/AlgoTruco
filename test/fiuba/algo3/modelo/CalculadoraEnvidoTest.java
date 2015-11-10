@@ -29,5 +29,15 @@ public class CalculadoraEnvidoTest
                         new Carta(Palo.Basto, 1),
                         new Carta(Palo.Copa, 1)));
     }
+
+    @Test
+    public void testFigurasValenCero()
+    {
+        Assert.assertEquals(0,
+                CalculadoraEnvido.calcular(
+                        new Carta(Palo.Espada, 10),
+                        new Carta(Palo.Basto, 11),
+                        new Carta(Palo.Copa, 12)));
+    }
 }
 
