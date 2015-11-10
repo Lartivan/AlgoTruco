@@ -26,5 +26,15 @@ public class CartaTest
         Assert.assertEquals(CartaVersus.Mata, Carta.comparar(cinco, cuatro));
         Assert.assertEquals(CartaVersus.Pierde, Carta.comparar(cuatro, cinco));
     }
+    
+    @Test
+    public void test3Mata4()
+    {
+        Carta tres = new Carta(Palo.Basto, 3);
+        Carta cuatro = new Carta(Palo.Espada, 4);
+        
+        Assert.assertEquals(CartaVersus.Mata, Carta.comparar(tres, cuatro));
+        Assert.assertEquals(CartaVersus.Pierde, Carta.comparar(cuatro, tres));
+    }
 }
 

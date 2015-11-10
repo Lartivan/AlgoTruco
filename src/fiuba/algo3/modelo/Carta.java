@@ -57,6 +57,66 @@ public class Carta
         R.agregar(S);
 
         S = new HashSet();
+        S.add(new Carta(Palo.Espada, 7));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Oro, 7));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Espada, 3));
+        S.add(new Carta(Palo.Basto, 3));
+        S.add(new Carta(Palo.Oro, 3));
+        S.add(new Carta(Palo.Copa, 3));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Espada, 2));
+        S.add(new Carta(Palo.Basto, 2));
+        S.add(new Carta(Palo.Oro, 2));
+        S.add(new Carta(Palo.Copa, 2));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Copa, 1));
+        S.add(new Carta(Palo.Oro, 1));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Espada, 12));
+        S.add(new Carta(Palo.Basto, 12));
+        S.add(new Carta(Palo.Oro, 12));
+        S.add(new Carta(Palo.Copa, 12));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Espada, 11));
+        S.add(new Carta(Palo.Basto, 11));
+        S.add(new Carta(Palo.Oro, 11));
+        S.add(new Carta(Palo.Copa, 11));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Espada, 10));
+        S.add(new Carta(Palo.Basto, 10));
+        S.add(new Carta(Palo.Oro, 10));
+        S.add(new Carta(Palo.Copa, 10));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Copa, 7));
+        S.add(new Carta(Palo.Basto, 7));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Espada, 6));
+        S.add(new Carta(Palo.Basto, 6));
+        S.add(new Carta(Palo.Oro, 6));
+        S.add(new Carta(Palo.Copa, 6));
+        R.agregar(S);
+
+        S = new HashSet();
         S.add(new Carta(Palo.Espada, 5));
         S.add(new Carta(Palo.Basto, 5));
         S.add(new Carta(Palo.Oro, 5));
