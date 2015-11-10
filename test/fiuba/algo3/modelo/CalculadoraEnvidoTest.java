@@ -19,5 +19,15 @@ public class CalculadoraEnvidoTest
                         new Carta(Palo.Basto, 1),
                         new Carta(Palo.Copa, 1)));
     }
+
+    @Test
+    public void testTresCartasDeDistintoPaloValenComoLaMasAlta()
+    {
+        Assert.assertEquals(7,
+                CalculadoraEnvido.calcular(
+                        new Carta(Palo.Espada, 7),
+                        new Carta(Palo.Basto, 1),
+                        new Carta(Palo.Copa, 1)));
+    }
 }
 

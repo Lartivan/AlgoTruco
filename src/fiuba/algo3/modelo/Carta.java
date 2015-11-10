@@ -37,6 +37,11 @@ public class Carta
         return palo.hashCode() ^ new Integer(valor).hashCode();
     }
 
+    public int getValor()
+    {
+        return valor;
+    }
+
 /*================================*STATICS*===================================*/
 
     private static Ranking<Carta> R;
