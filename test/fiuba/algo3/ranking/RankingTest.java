@@ -50,6 +50,8 @@ public class RankingTest
         
         Assert.assertEquals(Comparaciones.Igual,
                 R.comparar(new Integer(1), new Integer(2)));
+        Assert.assertEquals(Comparaciones.Igual,
+                R.comparar(new Integer(2), new Integer(1)));
     }
 }
 
