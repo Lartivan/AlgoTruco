@@ -20,5 +20,10 @@ public class Mano
         cartasIniciales = tmp;
         cartasEnMano = tmp;
     }
+    
+    public int getValorEnvido()
+    {
+        return 1;
+    }
 }
 
