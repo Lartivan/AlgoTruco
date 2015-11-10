@@ -39,5 +39,43 @@ public class CalculadoraEnvidoTest
                         new Carta(Palo.Basto, 11),
                         new Carta(Palo.Copa, 12)));
     }
+
+    @Test
+    public void testCalculoParcialFigurasValenCero()
+    {
+        Assert.assertEquals(0,
+                CalculadoraEnvido.calculoParcial(
+                        new Carta(Palo.Espada, 10),
+                        new Carta(Palo.Copa, 11)));
+    }
+/*
+    @Test
+    public void testCalculoParcialCartasDeDistintoPaloValenComoLaMasAlta()
+    {
+        Assert.assertEquals(7,
+                CalculadoraEnvido.calculoParcial(
+                        new Carta(Palo.Espada, 7),
+                        new Carta(Palo.Copa, 1)));
+    }
+/*
+    public void testDosCartasDelMismoPaloSumanVeinte()
+    {
+        Assert.assertEquals(20,
+                CalculadoraEnvido.calculoParcial(
+                        new Carta(Palo.Basto, 10),
+                        new Carta(Palo.Basto, 11)));
+    }
+
+/*
+    @Test
+    public void testDosCartasDelMismoPaloSumanVeinte()
+    {
+        Assert.assertEquals(20,
+                CalculadoraEnvido.calcular(
+                        new Carta(Palo.Espada, 10),
+                        new Carta(Palo.Espada, 11),
+                        new Carta(Palo.Copa, 7)));
+    }
+*/
 }
 

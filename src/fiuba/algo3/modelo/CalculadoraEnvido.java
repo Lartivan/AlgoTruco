@@ -21,5 +21,13 @@ public class CalculadoraEnvido
     {
         return c.getValor() < 10 ? c.getValor() : 0;
     }
+    
+    public static int calculoParcial(Carta c1, Carta c2)
+    {
+        if (c1.getPalo() == c2.getPalo())
+            return valor(c1) + valor(c2) + 20;
+        else
+            return Math.max(valor(c1), valor(c2));
+    }
 }
 

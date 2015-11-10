@@ -42,6 +42,11 @@ public class Carta
         return valor;
     }
 
+    public Palo getPalo()
+    {
+        return palo;
+    }
+
 /*================================*STATICS*===================================*/
 
     private static Ranking<Carta> R;
