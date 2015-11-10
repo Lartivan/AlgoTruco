@@ -36,6 +36,10 @@ public class Ranking<E>
 
     public Comparaciones comparar(E e1, E e2)
     {
+        if (!( relacionesElementoClase.keySet().contains(e1) )
+                || !( relacionesElementoClase.keySet().contains(e2) ))
+            throw new RuntimeException("Elementos incomensurables.");
+        
         Set<E> clase1, clase2;
         clase1 = relacionesElementoClase.get(e1);
         clase2 = relacionesElementoClase.get(e2);
