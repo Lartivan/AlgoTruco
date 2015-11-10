@@ -1,5 +1,11 @@
 package src.fiuba.algo3.modelo;
 
+import src.fiuba.algo3.ranking.Ranking;
+import src.fiuba.algo3.ranking.Comparaciones;
+
+import java.util.Set;
+import java.util.HashSet;
+
 public class Carta
 {
     private Palo palo;
@@ -21,15 +27,14 @@ public class Carta
             return CartaVersus.Mata;
     }
     
-    public boolean equals(Carta x)
+    public boolean equals(Object x)
     {
-        return palo == x.palo && valor == x.valor;
+        return palo == ((Carta)x).palo && valor == ((Carta)x).valor;
     }
 
     public int hashCode()
     {
-        // CUIDADO! Esta implementacion de hashCode no es segura.
-        return palo.hashCode() ^ valor;
+        return palo.hashCode() ^ new Integer(valor).hashCode();
     }
 }
 
