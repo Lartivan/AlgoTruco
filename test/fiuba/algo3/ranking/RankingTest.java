@@ -36,6 +36,8 @@ public class RankingTest
         
         Assert.assertEquals(Comparaciones.Mayor,
                 R.comparar(new Integer(1), new Integer(0)));
+        Assert.assertEquals(Comparaciones.Menor,
+                R.comparar(new Integer(0), new Integer(1)));
     }
     
     @Test

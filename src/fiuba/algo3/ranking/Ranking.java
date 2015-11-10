@@ -46,7 +46,7 @@ public class Ranking<E>
         for (Set<E> clase : clasesDeEquivalencia)
             if (clase.equals(clase1))
                 return Comparaciones.Mayor;
-            else if (clase.equals(clase1))
+            else if (clase.equals(clase2))
                 return Comparaciones.Menor;
         
         // La linea que sigue es para apaciguar al compilador:
