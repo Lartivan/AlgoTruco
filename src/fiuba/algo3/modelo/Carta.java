@@ -19,9 +19,9 @@ public class Carta
     
     public static CartaVersus comparar(Carta a, Carta b)
     {
-        if (a.valor < b.valor)
+        if (R.comparar(a, b) == Comparaciones.Menor)
             return CartaVersus.Pierde;
-        else if (a.valor == b.valor)
+        else if (R.comparar(a, b) == Comparaciones.Igual)
             return CartaVersus.Emparda;
         else
             return CartaVersus.Mata;
@@ -35,6 +35,40 @@ public class Carta
     public int hashCode()
     {
         return palo.hashCode() ^ new Integer(valor).hashCode();
+    }
+
+/*================================*STATICS*===================================*/
+
+    private static Ranking<Carta> R;
+    
+    // Inicializacion de clase.
+    { if (R == null) inicializaR(); }
+
+    private static void inicializaR()
+    {
+        R = new Ranking<Carta>();
+        Set<Carta> S = new HashSet();
+        
+        S.add(new Carta(Palo.Espada, 1));
+        R.agregar(S);
+        
+        S = new HashSet();
+        S.add(new Carta(Palo.Basto, 1));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Espada, 5));
+        S.add(new Carta(Palo.Basto, 5));
+        S.add(new Carta(Palo.Oro, 5));
+        S.add(new Carta(Palo.Copa, 5));
+        R.agregar(S);
+
+        S = new HashSet();
+        S.add(new Carta(Palo.Espada, 4));
+        S.add(new Carta(Palo.Basto, 4));
+        S.add(new Carta(Palo.Oro, 4));
+        S.add(new Carta(Palo.Copa, 4));
+        R.agregar(S);
     }
 }
 
