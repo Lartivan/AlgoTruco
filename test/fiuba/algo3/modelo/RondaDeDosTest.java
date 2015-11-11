@@ -49,5 +49,11 @@ public class RondaDeDosTest
         
         Assert.assertEquals(null, R.getGanador());
     }
+
+    @Test
+    public void testRondaNuevaNoTieneGanador()
+    {
+        Assert.assertEquals(null, R.getGanador());
+    }
 }
 
