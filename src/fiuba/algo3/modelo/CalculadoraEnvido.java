@@ -11,10 +11,10 @@ public class CalculadoraEnvido
 {
     public static int calcular(Carta ... cartas)
     {
-        Collection<Integer> valores = new ArrayList<Integer>();
-        for (Carta c : cartas)
-            valores.add(valor(c));
-        return Collections.max(valores);
+        return Math.max(
+                Math.max(calculoParcial(cartas[0], cartas[1]),
+                        calculoParcial(cartas[0], cartas[2])),
+                calculoParcial(cartas[1], cartas[2]));
     }
 
     private static int valor(Carta c)

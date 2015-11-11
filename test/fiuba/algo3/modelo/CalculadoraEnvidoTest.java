@@ -67,7 +67,6 @@ public class CalculadoraEnvidoTest
                         new Carta(Palo.Basto, 11)));
     }
 
-/*
     @Test
     public void testDosCartasDelMismoPaloSumanVeinte()
     {
@@ -77,6 +76,5 @@ public class CalculadoraEnvidoTest
                         new Carta(Palo.Espada, 11),
                         new Carta(Palo.Copa, 7)));
     }
-*/
 }
 
