@@ -48,7 +48,7 @@ public class CalculadoraEnvidoTest
                         new Carta(Palo.Espada, 10),
                         new Carta(Palo.Copa, 11)));
     }
-/*
+
     @Test
     public void testCalculoParcialCartasDeDistintoPaloValenComoLaMasAlta()
     {
