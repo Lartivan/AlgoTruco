@@ -53,5 +53,11 @@ public class RankingTest
         Assert.assertEquals(Comparaciones.Igual,
                 R.comparar(new Integer(2), new Integer(1)));
     }
+    
+    @Test(expected = RuntimeException.class)
+    public void testCompararElementosInexistentesCausaError()
+    {
+        R.comparar(new Integer(1), new Integer(2));
+    }
 }
 
