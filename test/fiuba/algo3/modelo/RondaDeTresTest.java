@@ -33,12 +33,13 @@ public class RondaDeTresTest
         
         Assert.assertEquals(j1, R.getGanador());
     }
-/*
+
     @Test
     public void testGanaJ2()
     {
-        R.jugar(j1, new Carta(Palo.Oro, 7));
-        R.jugar(j2, new Carta(Palo.Espada, 7));
+        R.jugar(j1, new Carta(Palo.Copa, 11));
+        R.jugar(j2, new Carta(Palo.Oro, 3));
+        R.jugar(j3, new Carta(Palo.Basto, 6));
         
         Assert.assertEquals(j2, R.getGanador());
     }
