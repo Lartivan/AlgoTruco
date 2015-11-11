@@ -17,5 +17,15 @@ public class ManoTest
                 new Carta(Palo.Espada, 1),
                 new Carta(Palo.Copa, 1));
     }
+
+    @Test
+    public void testCalculoDelEnvido()
+    {
+        Mano M = new Mano(new Carta(Palo.Oro, 7),
+                new Carta(Palo.Oro, 5),
+                new Carta(Palo.Copa, 2));
+        
+        Assert.assertEquals(32, M.getValorEnvido());
+    }
 }
 

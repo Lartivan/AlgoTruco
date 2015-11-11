@@ -23,7 +23,8 @@ public class Mano
     
     public int getValorEnvido()
     {
-        return 1;
+        return CalculadoraEnvido.calcular(
+                cartasIniciales.toArray(new Carta[0]));
     }
 }
 
