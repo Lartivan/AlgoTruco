@@ -57,8 +57,9 @@ public class CalculadoraEnvidoTest
                         new Carta(Palo.Espada, 7),
                         new Carta(Palo.Copa, 1)));
     }
-/*
-    public void testDosCartasDelMismoPaloSumanVeinte()
+
+    @Test
+    public void testCalculoParcialDosCartasDelMismoPaloSumanVeinte()
     {
         Assert.assertEquals(20,
                 CalculadoraEnvido.calculoParcial(
