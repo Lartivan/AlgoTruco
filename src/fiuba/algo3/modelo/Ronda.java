@@ -28,7 +28,13 @@ public class Ronda
                 cartaMasAlta = new ArrayList<Carta>();
                 cartaMasAlta.add(c);
             }
-        return cartaJugador.get(cartaMasAlta.get(0));
+            else if (Carta.comparar(c, cartaMasAlta.get(0))
+                    == CartaVersus.Emparda)
+                cartaMasAlta.add(c);
+        if (cartaMasAlta.size() == 1)
+            return cartaJugador.get(cartaMasAlta.get(0));
+        else
+            return null;
     }
 }
-    
+

@@ -40,5 +40,14 @@ public class RondaDeDosTest
         
         Assert.assertEquals(j2, R.getGanador());
     }
+
+    @Test
+    public void testEmpardan()
+    {
+        R.jugar(j1, new Carta(Palo.Copa, 2));
+        R.jugar(j2, new Carta(Palo.Basto, 2));
+        
+        Assert.assertEquals(null, R.getGanador());
+    }
 }
 
