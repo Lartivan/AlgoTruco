@@ -53,15 +53,15 @@ public class RondaDeTresTest
         
         Assert.assertEquals(j3, R.getGanador());
     }
-/*
+
     @Test
     public void testEmpardan()
     {
         R.jugar(j1, new Carta(Palo.Copa, 2));
-        R.jugar(j2, new Carta(Palo.Basto, 2));
+        R.jugar(j2, new Carta(Palo.Oro, 2));
+        R.jugar(j3, new Carta(Palo.Basto, 7));
         
         Assert.assertEquals(null, R.getGanador());
     }
-*/
 }
 
