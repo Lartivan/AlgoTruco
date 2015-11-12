@@ -3,6 +3,7 @@ Juego de Truco escrito en Java para el TP final de Algoritmos y Programación 3 
 
 Reportes del servidor de integracion continua en:
 https://nicopaez.ci.cloudbees.com/view/Algo3/job/nicopaez-grupo3-2015-2/
+[![Build Status](https://nicopaez.ci.cloudbees.com/view/Algo3/job/nicopaez-grupo3-2015-2/badge/icon)](https://nicopaez.ci.cloudbees.com/view/Algo3/job/nicopaez-grupo3-2015-2/)
 
 ## Algunos detalles de implementacion
 Para mantener en memoria los valores relativos de las cartas se usó una estructura
