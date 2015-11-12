@@ -18,5 +18,5 @@ puede lograrse tomando dos de ellas. El crédito por esta elegante solucion pert
 los miembros del grupo gaby-3 (repo en github.com/Payas17/TPFinalAlgo3) y especialmente
 a Payas17
 
-## Trend de tests
-https://nicopaez.ci.cloudbees.com/view/Algo3/job/nicopaez-grupo3-2015-2/test/trend
+## Build trend
+[![Build trend](https://nicopaez.ci.cloudbees.com/view/Algo3/job/nicopaez-grupo3-2015-2/test/trend)](https://nicopaez.ci.cloudbees.com/view/Algo3/job/nicopaez-grupo3-2015-2/)
