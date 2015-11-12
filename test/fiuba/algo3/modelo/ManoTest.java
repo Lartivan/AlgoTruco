@@ -52,7 +52,11 @@ public class ManoTest
         Mano M = new Mano(new Carta(Palo.Espada, 1),
                 new Carta(Palo.Espada, 2),
                 new Carta(Palo.Espada, 3));
+        
         M.jugar(new Carta(Palo.Espada, 1));
+        Assert.assertFalse(
+                M.getCartasEnMano().contains(new Carta(Palo.Espada, 1)));
+        
         M.jugar(new Carta(Palo.Espada, 1));
     }
 
