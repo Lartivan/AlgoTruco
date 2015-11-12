@@ -45,16 +45,15 @@ public class ManoTest
                 new Carta(Palo.Espada, 3));
         M.jugar(new Carta(Palo.Oro, 7));
     }
-/*
+
     @Test(expected = RuntimeException.class)
     public void testJugarCartaLaSacaDeLaMano()
     {
-        J.repartir(new Mano(new Carta(Palo.Espada, 1),
+        Mano M = new Mano(new Carta(Palo.Espada, 1),
                 new Carta(Palo.Espada, 2),
-                new Carta(Palo.Espada, 3)));
-        J.jugar(new Carta(Palo.Espada, 1));
-        J.jugar(new Carta(Palo.Espada, 1));
+                new Carta(Palo.Espada, 3));
+        M.jugar(new Carta(Palo.Espada, 1));
+        M.jugar(new Carta(Palo.Espada, 1));
     }
-*/
 }
 

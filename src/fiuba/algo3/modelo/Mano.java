@@ -31,6 +31,7 @@ public class Mano
     {
         if (! cartasEnMano.contains(c))
             throw new RuntimeException("Carta no esta en mano.");
+        cartasEnMano.remove(c);
     }
 }
 
