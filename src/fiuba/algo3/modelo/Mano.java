@@ -29,6 +29,8 @@ public class Mano
 
     public void jugar(Carta c)
     {
+        if (! cartasEnMano.contains(c))
+            throw new RuntimeException("Carta no esta en mano.");
     }
 }
 
