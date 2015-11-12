@@ -26,5 +26,9 @@ public class Mano
         return CalculadoraEnvido.calcular(
                 cartasIniciales.toArray(new Carta[0]));
     }
+
+    public void jugar(Carta c)
+    {
+    }
 }
 

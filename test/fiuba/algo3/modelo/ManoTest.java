@@ -27,5 +27,14 @@ public class ManoTest
         
         Assert.assertEquals(32, M.getValorEnvido());
     }
+
+    @Test
+    public void testJugarCartaCasoFelizNoLanzaExcepcion()
+    {
+        Mano M = new Mano(new Carta(Palo.Oro, 7),
+                new Carta(Palo.Oro, 5),
+                new Carta(Palo.Copa, 2));
+        M.jugar(new Carta(Palo.Oro, 7));
+    }
 }
 
