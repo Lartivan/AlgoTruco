@@ -17,3 +17,6 @@ El valor para el envido de una mano de tres cartas es el mayor valor de envido q
 puede lograrse tomando dos de ellas. El crédito por esta elegante solucion pertenece a
 los miembros del grupo gaby-3 (repo en github.com/Payas17/TPFinalAlgo3) y especialmente
 a Payas17
+
+## Trend de tests
+https://nicopaez.ci.cloudbees.com/view/Algo3/job/nicopaez-grupo3-2015-2/test/trend
