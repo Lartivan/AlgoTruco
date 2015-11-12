@@ -8,6 +8,7 @@ public class Jugador
     {
         if (mano == null)
             throw new RuntimeException("El Jugador no tiene cartas");
+        mano.jugar(c);
     }
 
     public void repartir(Mano unaMano)

@@ -34,12 +34,14 @@ public class JugadorTest
         J.jugar(new Carta(Palo.Espada, 1));
     }
 
-/*
-    @Test
+    @Test(expected = RuntimeException.class)
     public void testJugarCartaLaSacaDeLaMano()
     {
-        J
+        J.repartir(new Mano(new Carta(Palo.Espada, 1),
+                new Carta(Palo.Espada, 2),
+                new Carta(Palo.Espada, 3)));
+        J.jugar(new Carta(Palo.Espada, 1));
+        J.jugar(new Carta(Palo.Espada, 1));
     }
-*/
 }
 
