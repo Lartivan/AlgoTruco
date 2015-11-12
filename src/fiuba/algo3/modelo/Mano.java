@@ -33,5 +33,10 @@ public class Mano
             throw new RuntimeException("Carta no esta en mano.");
         cartasEnMano.remove(c);
     }
+    
+    public Collection<Carta> getCartasEnMano()
+    {
+        return cartasEnMano;
+    }
 }
 
