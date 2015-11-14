@@ -1,5 +1,7 @@
 package src.fiuba.algo3.modelo;
 
+import java.util.Collection;
+
 public class Jugador
 {
     private Mano mano;
@@ -14,6 +16,18 @@ public class Jugador
     public void repartir(Mano unaMano)
     {
         mano = unaMano;
+    }
+
+    public Collection<Carta> getCartasEnMano()
+    {
+        try
+        {
+            return mano.getCartasEnMano();
+        }
+        catch (NullPointerException e)
+        {
+            return null;
+        }
     }
 }
 

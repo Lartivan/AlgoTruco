@@ -10,11 +10,13 @@ public class Juego
 
     public Juego(Jugador ... jugadores)
     {
+        this.jugadores = new ArrayList();
+        for (Jugador x : jugadores)
+            this.jugadores.add(x);
     }
 
-    public Collection<Carta> getCartas(Jugador unJugador)
+    public void repartir()
     {
-        return null;
     }
 }
 
