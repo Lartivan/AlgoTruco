@@ -17,6 +17,11 @@ public class Juego
 
     public void repartir()
     {
+        for (Jugador x : jugadores)
+            x.repartir(new Mano(
+                    new Carta(Palo.Espada, 1),
+                    new Carta(Palo.Basto, 2),
+                    new Carta(Palo.Copa, 3)));
     }
 }
 
