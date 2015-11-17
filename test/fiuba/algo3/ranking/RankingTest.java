@@ -59,5 +59,15 @@ public class RankingTest
     {
         R.comparar(new Integer(1), new Integer(2));
     }
+
+    @Test(expected = RuntimeException.class)
+    public void testCompararElementosExistentesConInexistentesCausaError()
+    {
+        Set<Integer> S = new HashSet();
+        S.add(1);
+        R.agregar(S);
+        
+        R.comparar(new Integer(1), new Integer(2));
+    }
 }
 
