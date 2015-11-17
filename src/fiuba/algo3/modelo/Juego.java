@@ -7,21 +7,21 @@ import java.util.ArrayList;
 public class Juego
 {
     private List<Jugador> jugadores;
+    private Mazo mazo;
 
     public Juego(Jugador ... jugadores)
     {
         this.jugadores = new ArrayList();
         for (Jugador x : jugadores)
             this.jugadores.add(x);
+        
+        mazo = new Mazo();
     }
 
     public void repartir()
     {
         for (Jugador x : jugadores)
-            x.repartir(new Mano(
-                    new Carta(Palo.Espada, 1),
-                    new Carta(Palo.Basto, 2),
-                    new Carta(Palo.Copa, 3)));
+            x.repartir(new Mano(mazo.sacar(), mazo.sacar(), mazo.sacar()));
     }
 }
 
