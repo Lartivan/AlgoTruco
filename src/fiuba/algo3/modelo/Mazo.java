@@ -1,6 +1,7 @@
 package src.fiuba.algo3.modelo;
 
 import java.util.Collections;
+import java.util.Collection;
 import java.util.Queue;
 import java.util.List;
 import java.util.LinkedList;
@@ -12,6 +13,11 @@ public class Mazo
     public Mazo()
     {
         llenarMazo();
+    }
+
+    public Mazo(Collection<Carta> unaLista)
+    {
+        cartas = new LinkedList(unaLista);
     }
     
     public Carta sacar()
