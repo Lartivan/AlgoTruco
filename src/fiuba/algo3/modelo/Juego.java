@@ -28,5 +28,7 @@ public class Juego
     {
         return jugadores.get(0);
     }
+    
+    public void jugar(Jugador unJugador, Carta unaCarta) {}
 }
 
