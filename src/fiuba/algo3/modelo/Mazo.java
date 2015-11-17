@@ -23,6 +23,11 @@ public class Mazo
     {
         Collections.shuffle(cartas);
     }
+    
+    public int cartasRestantes()
+    {
+        return cartas.size();
+    }
 
     public void llenarMazo()
     {

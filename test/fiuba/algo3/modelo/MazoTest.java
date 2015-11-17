@@ -31,5 +31,12 @@ public class MazoTest
     {
         Assert.assertNotEquals(mazo.sacar(), mazo.sacar());
     }
+
+    @Test
+    public void testMazoSeCreaCon40Cartas()
+    {
+        mazo = new Mazo();
+        Assert.assertEquals(40, mazo.cartasRestantes());
+    }
 }
 
