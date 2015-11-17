@@ -30,7 +30,7 @@ public class Ciclo
     private void contarRondasGanadas(List<Jugador> jugadores,
             List<Integer> contadores)
     {
-            for (Ronda x : rondas)
+        for (Ronda x : rondas)
         {
             Jugador ganadorDeRonda = x.getGanador();
             
