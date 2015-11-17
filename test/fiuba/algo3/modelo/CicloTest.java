@@ -38,5 +38,17 @@ public class CicloTest
         Assert.assertEquals(j1, unCiclo.getRonda(1).getGanador());
         Assert.assertEquals(null, unCiclo.getGanador());
     }
+    
+    @Test
+    public void testGanarDosRondasDefineElCiclo()
+    {
+        unCiclo.jugar(j1, new Carta(Palo.Espada, 1));
+        unCiclo.jugar(j2, new Carta(Palo.Oro, 7));
+        
+        unCiclo.jugar(j1, new Carta(Palo.Basto, 1));
+        unCiclo.jugar(j2, new Carta(Palo.Copa, 6));
+        
+        Assert.assertEquals(j1, unCiclo.getGanador());
+    }
 }
 

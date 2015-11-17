@@ -15,6 +15,29 @@ public class Ciclo
     
     public Jugador getGanador()
     {
+        List<Jugador> jugadores = new ArrayList<Jugador>();
+        List<Integer> contadores = new ArrayList<Integer>();
+        
+        for (Ronda x : rondas)
+        {
+            Jugador ganadorDeRonda = x.getGanador();
+            
+            if (jugadores.contains(ganadorDeRonda))
+            {
+                Integer i = jugadores.indexOf(ganadorDeRonda);
+                contadores.set(i, contadores.get(i) + 1);
+            }
+            else
+            {
+                jugadores.add(ganadorDeRonda);
+                contadores.add(1);
+            }
+        }
+        
+        for (int i = 0; i < jugadores.size(); i++)
+            if (contadores.get(i) >= 2)
+                return jugadores.get(i);
+        
         return null;
     }
     
@@ -25,7 +48,11 @@ public class Ciclo
     
     public void jugar(Jugador unJugador, Carta unaCarta)
     {
-        rondas.get(rondas.size() - 1).jugar(unJugador, unaCarta);
+        Ronda ultimaRonda = rondas.get(rondas.size() - 1);
+        
+        ultimaRonda.jugar(unJugador, unaCarta);
+        if (ultimaRonda.getGanador() != null)
+            rondas.add(new Ronda());
     }
 }
 
