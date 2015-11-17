@@ -23,5 +23,10 @@ public class Juego
         for (Jugador x : jugadores)
             x.repartir(new Mano(mazo.sacar(), mazo.sacar(), mazo.sacar()));
     }
+
+    public Jugador getGanadorRonda(int index)
+    {
+        return jugadores.get(0);
+    }
 }
 

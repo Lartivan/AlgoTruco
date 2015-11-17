@@ -46,5 +46,24 @@ public class JuegoTest
         Assert.assertEquals(3, cartasJ1.size());
         Assert.assertEquals(3, cartasJ2.size());
     }
+
+    @Test
+    public void testPrimerJugadorGanaPrimeraRonda()
+    {
+        // NOTE: Al repartir sin mezclar, jugador1 recibe como primera carta
+        // el ancho de espadas. Para mas precision: recibe las tres cartas mas
+        // valiosas en el truco.
+        // ADVERTENCIA: Este comportamiento depende del orden en que se agregan
+        // las cartas al mazo en el momento de su creacion.
+        J.repartir();
+        
+        Carta [] cartasJ1 = j1.getCartasEnMano().toArray(new Carta[0]);
+        Carta [] cartasJ2 = j2.getCartasEnMano().toArray(new Carta[0]);
+        
+        j1.jugar(cartasJ1[0]);
+        j2.jugar(cartasJ2[0]);
+        
+        Assert.assertEquals(j1, J.getGanadorRonda(1));
+    }
 }
 
