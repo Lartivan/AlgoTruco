@@ -25,5 +25,11 @@ public class MazoTest
     {
         Assert.assertNotEquals(null, mazo.sacar());
     }
+    
+    @Test
+    public void testSacarCartaNoDevuelveLaMismaCartaDosVeces()
+    {
+        Assert.assertNotEquals(mazo.sacar(), mazo.sacar());
+    }
 }
 
