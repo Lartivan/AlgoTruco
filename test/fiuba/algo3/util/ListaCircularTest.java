@@ -54,5 +54,20 @@ public class ListaCircularTest
     {
         lcEnteros.elementoActual();
     }
+    
+    @Test
+    public void testAvanzarPosicion()
+    {
+        lcEnteros.add(0);
+        lcEnteros.add(1);
+
+        Assert.assertEquals(1, lcEnteros.elementoActual().intValue());
+
+        lcEnteros.avanzarPosicion();
+        Assert.assertEquals(0, lcEnteros.elementoActual().intValue());
+
+        lcEnteros.avanzarPosicion();
+        Assert.assertEquals(1, lcEnteros.elementoActual().intValue());
+    }
 }
 

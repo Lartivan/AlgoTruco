@@ -32,5 +32,12 @@ public class ListaCircular<E>
     {
         return listaBase.get(indiceElementoActual);
     }
+
+    public void avanzarPosicion()
+    {
+        indiceElementoActual++;
+        if (indiceElementoActual >= listaBase.size())
+            indiceElementoActual = 0;
+    }
 }
 
