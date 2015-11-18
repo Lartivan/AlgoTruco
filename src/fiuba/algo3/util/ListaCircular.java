@@ -39,5 +39,16 @@ public class ListaCircular<E>
         if (indiceElementoActual >= listaBase.size())
             indiceElementoActual = 0;
     }
+    
+    public boolean hallarSiguiente(E elemento)
+    {
+        Integer i = listaBase.indexOf(elemento);
+        if (i >= 0)
+        {
+            indiceElementoActual = i;
+            return true;
+        }
+        return false;
+    }
 }
 

@@ -69,5 +69,17 @@ public class ListaCircularTest
         lcEnteros.avanzarPosicion();
         Assert.assertEquals(1, lcEnteros.elementoActual().intValue());
     }
+
+    @Test
+    public void testHallarSiguienteCasoFeliz()
+    {
+        lcEnteros.add(0);
+        lcEnteros.add(1);
+        lcEnteros.add(2);
+        lcEnteros.add(3);
+
+        lcEnteros.hallarSiguiente(2);
+        Assert.assertEquals(2, lcEnteros.elementoActual().intValue());
+    }
 }
 
