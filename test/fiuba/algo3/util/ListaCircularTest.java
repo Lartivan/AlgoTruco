@@ -48,5 +48,11 @@ public class ListaCircularTest
         lcEnteros.add(1);
         Assert.assertEquals(1, lcEnteros.elementoActual().intValue());
     }
+
+    @Test(expected = RuntimeException.class)
+    public void testElementoActualLanzaExcepcionEnListaVacia()
+    {
+        lcEnteros.elementoActual();
+    }
 }
 
