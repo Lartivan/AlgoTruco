@@ -6,6 +6,7 @@ import java.util.LinkedList;
 public class ListaCircular<E>
 {
     private List<E> listaBase;
+    private Integer indiceElementoActual;
     
     public ListaCircular()
     {
@@ -15,6 +16,11 @@ public class ListaCircular<E>
     public void add(E elemento)
     {
         listaBase.add(elemento);
+        
+        if (indiceElementoActual == null)
+            indiceElementoActual = 0;
+        else
+            indiceElementoActual++;
     }
     
     public int size()
@@ -24,7 +30,7 @@ public class ListaCircular<E>
     
     public E elementoActual()
     {
-        return listaBase.get(0);
+        return listaBase.get(indiceElementoActual);
     }
 }
 

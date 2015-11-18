@@ -41,5 +41,12 @@ public class ListaCircularTest
         lcEnteros.add(0);
         Assert.assertEquals(0, lcEnteros.elementoActual().intValue());
     }
+    
+    @Test public void testElementoActualEsElUltimoAgregado()
+    {
+        lcEnteros.add(0);
+        lcEnteros.add(1);
+        Assert.assertEquals(1, lcEnteros.elementoActual().intValue());
+    }
 }
 
