@@ -20,6 +20,13 @@ public class Mazo
         cartas = new LinkedList(unaLista);
     }
     
+    public Mazo(Carta ... algunasCartas)
+    {
+        cartas = new LinkedList<Carta>();
+        for (Carta x : algunasCartas)
+            cartas.add(x);
+    }
+    
     public Carta sacar()
     {
         return ( (Queue<Carta>)cartas ).remove();

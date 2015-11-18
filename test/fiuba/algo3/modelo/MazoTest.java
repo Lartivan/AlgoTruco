@@ -55,5 +55,18 @@ public class MazoTest
         Assert.assertEquals(unaLista.get(1), mazo.sacar());
         Assert.assertEquals(unaLista.get(2), mazo.sacar());
     }
+
+    @Test
+    public void testMazoAPartirDeCartas()
+    {
+        mazo = new Mazo(
+                new Carta(Palo.Copa, 3),
+                new Carta(Palo.Basto, 11),
+                new Carta(Palo.Espada, 6));
+        
+        Assert.assertEquals(new Carta(Palo.Copa, 3), mazo.sacar());
+        Assert.assertEquals(new Carta(Palo.Basto, 11), mazo.sacar());
+        Assert.assertEquals(new Carta(Palo.Espada, 6), mazo.sacar());
+    }
 }
 
