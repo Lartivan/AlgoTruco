@@ -8,6 +8,7 @@ public class Juego
 {
     private List<Jugador> jugadores;
     private Mazo mazo;
+    private Ciclo ciclo;
 
     public Juego(Jugador ... jugadores)
     {
@@ -16,6 +17,7 @@ public class Juego
             this.jugadores.add(x);
         
         mazo = new Mazo();
+        ciclo = new Ciclo();
     }
 
     public void repartir()
@@ -29,6 +31,14 @@ public class Juego
         return jugadores.get(0);
     }
     
-    public void jugar(Jugador unJugador, Carta unaCarta) {}
+    public void jugar(Jugador unJugador, Carta unaCarta)
+    {
+        ciclo.jugar(unJugador, unaCarta);
+    }
+
+    public void setMazo(Mazo unMazo)
+    {
+        mazo = unMazo;
+    }
 }
 

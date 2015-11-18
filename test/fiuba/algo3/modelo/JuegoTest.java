@@ -6,6 +6,7 @@ import org.junit.Assert;
 
 import src.fiuba.algo3.modelo.Juego;
 import src.fiuba.algo3.modelo.Jugador;
+import src.fiuba.algo3.modelo.Mazo;
 import src.fiuba.algo3.modelo.Carta;
 import src.fiuba.algo3.modelo.Palo;
 
@@ -62,6 +63,25 @@ public class JuegoTest
         
         j1.jugar(cartasJ1[0]);
         j2.jugar(cartasJ2[0]);
+        
+        Assert.assertEquals(j1, J.getGanadorRonda(1));
+    }
+
+    @Test
+    public void testSegundoJugadorGanaPrimeraRonda()
+    {
+        Mazo mazoSimple = new Mazo(
+            new Carta(Palo.Espada, 1),
+            new Carta(Palo.Basto, 3),
+            new Carta(Palo.Copa, 6),
+            new Carta(Palo.Basto, 1),
+            new Carta(Palo.Espada, 11),
+            new Carta(Palo.Copa, 12));
+        J.setMazo(mazoSimple);
+        J.repartir();
+        
+        j1.jugar(new Carta(Palo.Copa, 6));
+        j2.jugar(new Carta(Palo.Espada, 11));
         
         Assert.assertEquals(j1, J.getGanadorRonda(1));
     }
