@@ -13,18 +13,21 @@ public class ListaCircularTest
 {
     ListaCircular<Integer> lcEnteros;
     
+    @Before
+    public void setUp()
+    {
+        lcEnteros = new ListaCircular<Integer>();
+    }
+    
     @Test
     public void testListaVacia()
     {
-        lcEnteros = new ListaCircular<Integer>();
         Assert.assertEquals(0, lcEnteros.size());
     }
 
     @Test
     public void testAgregarElementoAumentaSize()
     {
-        lcEnteros = new ListaCircular<Integer>();
-
         lcEnteros.add(0);
         Assert.assertEquals(1, lcEnteros.size());
 
