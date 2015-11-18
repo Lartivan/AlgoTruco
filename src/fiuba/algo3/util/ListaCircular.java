@@ -21,5 +21,10 @@ public class ListaCircular<E>
     {
         return listaBase.size();
     }
+    
+    public E elementoActual()
+    {
+        return listaBase.get(0);
+    }
 }
 

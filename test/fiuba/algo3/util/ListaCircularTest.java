@@ -34,5 +34,12 @@ public class ListaCircularTest
         lcEnteros.add(0);
         Assert.assertEquals(2, lcEnteros.size());
     }
+    
+    @Test
+    public void testElementoActual()
+    {
+        lcEnteros.add(0);
+        Assert.assertEquals(0, lcEnteros.elementoActual().intValue());
+    }
 }
 
