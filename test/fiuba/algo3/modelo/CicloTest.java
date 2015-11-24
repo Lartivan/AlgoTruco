@@ -50,5 +50,13 @@ public class CicloTest
         
         Assert.assertEquals(j1, unCiclo.getGanador());
     }
+
+    @Test(expected = RuntimeException.class)
+    public void testJugadorNoRegistradoNoPuedeJugar()
+    {
+        Jugador j3 = new Jugador();
+        
+        unCiclo.jugar(j3, new Carta(Palo.Espada, 1));
+    }
 }
 
