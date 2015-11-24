@@ -40,5 +40,47 @@ public class EstadoCicloTerminadoTest
     {
         estado.cantarFaltaEnvido(j);
     }
+
+    @Test(expected = RuntimeException.class)
+    public void testNoSePuedeCantarQuieroEnvido()
+    {
+        estado.envidoQuiero(j);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testNoSePuedeCantarNoQuieroEnvido()
+    {
+        estado.envidoNoQuiero(j);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testNoSePuedeCantarTruco()
+    {
+        estado.cantarTruco(j);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testNoSePuedeCantarRetruco()
+    {
+        estado.cantarRetruco(j);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testNoSePuedeCantarValeCuatro()
+    {
+        estado.cantarValeCuatro(j);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testNoSePuedeCantarQuieroTruco()
+    {
+        estado.trucoQuiero(j);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testNoSePuedeCantarNoQuieroTruco()
+    {
+        estado.trucoNoQuiero(j);
+    }
 }
 
