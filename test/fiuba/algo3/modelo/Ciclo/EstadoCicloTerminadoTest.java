@@ -27,5 +27,11 @@ public class EstadoCicloTerminadoTest
     {
         estado.cantarEnvido(j);
     }
+
+    @Test(expected = RuntimeException.class)
+    public void testNoSePuedeCantarRealEnvido()
+    {
+        estado.cantarEnvido(j);
+    }
 }
 
