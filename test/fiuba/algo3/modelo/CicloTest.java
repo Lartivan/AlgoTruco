@@ -20,7 +20,7 @@ public class CicloTest
         j1 = new Jugador();
         j2 = new Jugador();
         
-        unCiclo = new Ciclo();
+        unCiclo = new Ciclo(j1, j2);
     }
 
     @Test

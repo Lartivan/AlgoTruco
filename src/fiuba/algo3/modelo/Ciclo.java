@@ -7,7 +7,7 @@ public class Ciclo
 {
     private List<Ronda> rondas;
     
-    public Ciclo()
+    public Ciclo(Jugador ... algunosJugadores)
     {
         rondas = new ArrayList<Ronda>();
         rondas.add(new Ronda());
