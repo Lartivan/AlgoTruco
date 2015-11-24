@@ -21,5 +21,11 @@ public class EstadoCicloTerminadoTest
     {
         estado.jugarCarta(j, c);
     }
+
+    @Test(expected = RuntimeException.class)
+    public void testNoSePuedeCantarEnvido()
+    {
+        estado.cantarEnvido(j);
+    }
 }
 
