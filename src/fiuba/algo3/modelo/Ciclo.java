@@ -6,11 +6,16 @@ import java.util.ArrayList;
 public class Ciclo
 {
     private List<Ronda> rondas;
+    private List<Jugador> jugadores;
     
     public Ciclo(Jugador ... algunosJugadores)
     {
         rondas = new ArrayList<Ronda>();
         rondas.add(new Ronda());
+        
+        jugadores = new ArrayList<Jugador>();
+        for (Jugador x : algunosJugadores)
+            jugadores.add(x);
     }
     
     public Jugador getGanador()
@@ -54,6 +59,9 @@ public class Ciclo
     
     public void jugar(Jugador unJugador, Carta unaCarta)
     {
+        if (! jugadores.contains(unJugador))
+            throw new RuntimeException("Jugador no registrado.");
+        
         Ronda ultimaRonda = rondas.get(rondas.size() - 1);
         
         ultimaRonda.jugar(unJugador, unaCarta);
