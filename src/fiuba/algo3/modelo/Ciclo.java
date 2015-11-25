@@ -87,5 +87,10 @@ public class Ciclo
     {
         estadoEnvido.cantarEnvido(j);
     }
+
+    public void envidoNoQuiero(Jugador j)
+    {
+        estadoEnvido.envidoNoQuiero(j);
+    }
 }
 

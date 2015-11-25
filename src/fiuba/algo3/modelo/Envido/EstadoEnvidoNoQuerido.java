@@ -1,6 +1,6 @@
 package src.fiuba.algo3.modelo;
 
-public class EstadoEnvidoCantado
+public class EstadoEnvidoNoQuerido
         implements EstadoEnvido
 {
     private Ciclo ciclo;
@@ -16,7 +16,6 @@ public class EstadoEnvidoCantado
     
     public void envidoNoQuiero(Jugador j)
     {
-        ciclo.setEstadoEnvido(new EstadoEnvidoNoQuerido());
     }
     
     public void cantarEnvido(Jugador j)

@@ -7,6 +7,7 @@ import org.junit.Assert;
 import src.fiuba.algo3.modelo.EstadoEnvido;
 import src.fiuba.algo3.modelo.EstadoEnvidoNoCantado;
 import src.fiuba.algo3.modelo.EstadoEnvidoCantado;
+import src.fiuba.algo3.modelo.EstadoEnvidoNoQuerido;
 import src.fiuba.algo3.modelo.Ciclo;
 import src.fiuba.algo3.modelo.Jugador;
 
@@ -31,6 +32,14 @@ public class EstadoEnvidoCantadoTest
         ciclo.cantarEnvido(j1);
         Assert.assertTrue(ciclo.getEstadoEnvido()
                 instanceof EstadoEnvidoCantado);
+    }
+
+    @Test
+    public void testNoQuieroCambiaEstadoAEnvidoNoQuerido()
+    {
+        ciclo.envidoNoQuiero(j1);
+        Assert.assertTrue(ciclo.getEstadoEnvido()
+                instanceof EstadoEnvidoNoQuerido);
     }
 }
 
