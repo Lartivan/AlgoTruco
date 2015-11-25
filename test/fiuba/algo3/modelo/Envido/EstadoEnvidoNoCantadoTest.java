@@ -44,5 +44,11 @@ public class EstadoEnvidoNoCantadoTest
     {
         Assert.assertFalse(ciclo.envidoNoQuiero(j1));
     }
+
+    @Test
+    public void testNoPuedeCantarEnvidoQuiero()
+    {
+        Assert.assertFalse(ciclo.envidoQuiero(j1));
+    }
 }
 
