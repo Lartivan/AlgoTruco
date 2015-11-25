@@ -19,7 +19,7 @@ public class EstadoEnvidoCantadoTest
     @Before
     public void setUp()
     {
-        estado = new EstadoEnvidoNoCantado();
+        estado = new EstadoEnvidoCantado();
         ciclo = new Ciclo();
         ciclo.setEstadoEnvido(estado);
         j1 = new Jugador();
