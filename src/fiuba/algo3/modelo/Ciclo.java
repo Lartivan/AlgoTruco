@@ -7,6 +7,7 @@ public class Ciclo
 {
     private List<Ronda> rondas;
     private List<Jugador> jugadores;
+    private EstadoEnvido estadoEnvido;
     
     public Ciclo(Jugador ... algunosJugadores)
     {
@@ -67,6 +68,24 @@ public class Ciclo
         ultimaRonda.jugar(unJugador, unaCarta);
         if (ultimaRonda.getGanador() != null)
             rondas.add(new Ronda());
+    }
+    
+/*===========================*ENVIDO*=========================================*/
+
+    public void setEstadoEnvido(EstadoEnvido e)
+    {
+        estadoEnvido = e;
+        e.setCiclo(this);
+    }
+    
+    public EstadoEnvido getEstadoEnvido()
+    {
+        return estadoEnvido;
+    }
+    
+    public void cantarEnvido(Jugador j)
+    {
+        estadoEnvido.cantarEnvido(j);
     }
 }
 
