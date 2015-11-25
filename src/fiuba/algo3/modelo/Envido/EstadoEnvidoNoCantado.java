@@ -10,17 +10,20 @@ public class EstadoEnvidoNoCantado
         ciclo = c;
     }
 
-    public void envidoQuiero(Jugador j)
+    public boolean envidoQuiero(Jugador j)
     {
+        return false;
     }
     
-    public void envidoNoQuiero(Jugador j)
+    public boolean envidoNoQuiero(Jugador j)
     {
+        return false;
     }
     
-    public void cantarEnvido(Jugador j)
+    public boolean cantarEnvido(Jugador j)
     {
         ciclo.setEstadoEnvido(new EstadoEnvidoCantado());
+        return false;
     }
 }
 

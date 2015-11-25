@@ -83,14 +83,14 @@ public class Ciclo
         return estadoEnvido;
     }
     
-    public void cantarEnvido(Jugador j)
+    public boolean cantarEnvido(Jugador j)
     {
-        estadoEnvido.cantarEnvido(j);
+        return estadoEnvido.cantarEnvido(j);
     }
 
-    public void envidoNoQuiero(Jugador j)
+    public boolean envidoNoQuiero(Jugador j)
     {
-        estadoEnvido.envidoNoQuiero(j);
+        return estadoEnvido.envidoNoQuiero(j);
     }
 }
 
