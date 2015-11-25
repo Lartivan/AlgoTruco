@@ -92,5 +92,10 @@ public class Ciclo
     {
         return estadoEnvido.envidoNoQuiero(j);
     }
+
+    public boolean envidoQuiero(Jugador j)
+    {
+        return estadoEnvido.envidoQuiero(j);
+    }
 }
 

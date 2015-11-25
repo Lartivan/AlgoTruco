@@ -38,5 +38,11 @@ public class EstadoEnvidoNoCantadoTest
         Assert.assertTrue(ciclo.getEstadoEnvido()
                 instanceof EstadoEnvidoCantado);
     }
+
+    @Test
+    public void testNoPuedeCantarEnvidoNoQuiero()
+    {
+        Assert.assertFalse(ciclo.envidoNoQuiero(j1));
+    }
 }
 
